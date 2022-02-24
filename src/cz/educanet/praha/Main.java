@@ -1,11 +1,9 @@
 package cz.educanet.praha;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-        ILanderControls controls;
+        ILanderControls controls = new LanderControls();
         // TODO set controls
         try {
             final var lander = new LunarLanding(

@@ -30,7 +30,7 @@ public class LunarLanding {
             }
 
             int fuel = controls.getSecondsOfFuelBurn(altitude, velocity);
-            if (fuel < 0) fuel = 0; // TODO throw exception
+            if (fuel < 0) throw new IllegalStateException("We created a black hole in our fuel tank");
             totalFuelBurnt += fuel;
             velocity -= (fuel * FUEL_POWER) - G;
             altitude -= velocity;
